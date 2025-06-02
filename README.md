@@ -68,6 +68,10 @@ uv run app.py
   ```
   (bulk_deal_quantity / daily_volume) > 1%
   ```
+  
+![Screenshot 2025-06-02 141437](https://github.com/user-attachments/assets/95092d13-57cf-4f4a-8581-06439f899dfc)
+
+  
 
 * **Note**: This endpoint processes all data before responding, which may take time.make hit on ```http://127.0.0.1:5000/bulk-deals ```
 
@@ -75,7 +79,9 @@ uv run app.py
 
 ### 2. `/fast-dumps` (GET)
 
-* **Purpose**: Similar to `/bulk-deals` but optimized for **speed**.it will directly dump the raw json data on screen
+* **Purpose**: ![Screenshot 2025-06-02 140935](https://github.com/user-attachments/assets/fa9dc7c0-2fd4-4b84-b6f4-d48526ac96e4)
+* Same as  `/bulk-deals` but optimized for **speed**.it will directly dump the raw json data on screen
+  
 * **Difference**: same as /bulk-deal endpoint but look at app.py 
 function bulk deal store data inside result then after completing the operation it will return the result 
 
@@ -84,6 +90,8 @@ function bulk deal store data inside result then after completing the operation 
 ### 3. `/valid-symbols` (GET)
 
 * **Purpose**: Returns only the **valid stock symbols** (from NSE/BSE) which are supported by `yfinance`.
+  ![Screenshot 2025-06-02 143720](https://github.com/user-attachments/assets/c8f46735-df78-4ecc-9f95-d70b5df3a5e1)
+
 * **Why**: Not all symbols in bulk deals are available on Yahoo Finance. This endpoint helps identify symbols with retrievable data.yfinance gives us limited data for particular symbols so we need to figure out the real symbols
 
 ---
